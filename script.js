@@ -53,5 +53,5 @@ vinyle.addEventListener('click', () => {
 
 // Bouton envoyer
 document.getElementById('sendBtn').addEventListener('click', () => {
-  alert('Merci !');
+  alert('hit the face of Asa!');
 });
