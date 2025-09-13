@@ -1,20 +1,19 @@
-/* Style général du site */
+/* Style général */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #111; /* fond sombre */
+  background-color: #111;
   color: #fff;
   margin: 0;
   padding: 20px;
   line-height: 1.6;
-  text-align: center;
 }
 
-/* En-tête */
 header {
   background: #222;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 header h1 {
@@ -25,13 +24,15 @@ header h1 {
 nav a {
   margin: 0 12px;
   text-decoration: none;
-  color: #1db954; /* vert style Spotify */
+  color: #1db954;
   font-weight: bold;
   transition: color 0.2s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: #fff;
+  outline: none;
 }
 
 /* Zone principale */
@@ -39,7 +40,9 @@ main {
   background: #181818;
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 h2, h3 {
@@ -47,18 +50,22 @@ h2, h3 {
   margin-top: 0;
 }
 
-/* --- Vinyle --- */
+main p {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+/* Vinyle animé */
 .vinyle {
   width: 250px;
   height: 250px;
   margin: 20px auto;
   border-radius: 50%;
-  background: url('vinyle.png') no-repeat center/cover; /* image du vinyle */
-  animation: spin 5s linear infinite; /* rotation */
+  background: url('vinyle.png') no-repeat center/cover;
+  animation: spin 5s linear infinite;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
-/* Animation de rotation */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -68,9 +75,12 @@ h2, h3 {
 audio {
   margin-top: 15px;
   width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Bouton Play/Pause */
+/* Boutons */
 button {
   margin-top: 12px;
   background: #1db954;
@@ -94,7 +104,6 @@ footer {
   border-radius: 12px;
   font-size: 0.9rem;
   color: #aaa;
+  text-align: center;
   margin-top: 20px;
 }
-
-
