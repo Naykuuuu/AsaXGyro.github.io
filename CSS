@@ -1,80 +1,155 @@
-/* Style général */
-<link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mon site avec vinyle 🎵</title>
+  <style>
+    /* Style global */
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.5;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5; /* Couleur de fond */
-  color: #222; /* Couleur du texte */
-  margin: 0;
-  padding: 20px;
-  line-height: 1.6;
-}
+    header, footer {
+      background: #222;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-/* En-tête */
-header {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  margin-bottom: 20px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #333;
-}
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1db954; /* vert Spotify style */
+      font-weight: bold;
+      transition: color 0.2s;
+    }
 
-/* Liens de navigation */
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
-  transition: color 0.2s;
-}
+    nav a:hover {
+      color: #fff;
+    }
 
-nav a:hover {
-  color: #005999;
-}
+    main {
+      background: #181818;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
 
-/* Sections principales */
-main {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
+    h2, h3 {
+      margin-top: 0;
+      color: #1db954;
+    }
 
-h2, h3 {
-  color: #444;
-  margin-top: 0;
-}
+    /* Vinyle */
+    .vinyle {
+      width: 250px;
+      height: 250px;
+      margin: 20px auto;
+      border-radius: 50%;
+      background: url('vinyle.png') no-repeat center/cover; /* Mets ton image ici */
+      animation: spin 5s linear infinite;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
 
-/* Bouton */
-button {
-  background: #0077cc;
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s;
-}
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
-button:hover {
-  background: #005999;
-}
+    audio {
+      margin-top: 20px;
+      width: 80%;
+    }
 
-/* Pied de page */
-footer {
-  margin-top: 20px;
-  background: #ffffff;
-  padding: 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-}
+    button {
+      margin-top: 10px;
+      background: #1db954;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #17a44c;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎶 Mon super site musical</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#vinyle">Vinyle</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil">
+      <h2>Bienvenue</h2>
+      <p>Ici tu peux écouter de la musique et voir un vinyle tourner.</p>
+    </section>
+
+    <section id="vinyle">
+      <h3>Mon vinyle en action</h3>
+      <div class="vinyle"></div>
+      <audio id="player" controls loop>
+        <source src="ma-musique.mp3" type="audio/mpeg">
+        Ton navigateur ne supporte pas l’audio HTML5.
+      </audio>
+      <br>
+      <button onclick="toggleVinyle()">Play / Pause Animation</button>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email : ton-email@example.com</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 — Ton nom ou projet
+  </footer>
+
+  <script>
+    // Permet d'arrêter/reprendre la rotation du vinyle
+    const vinyle = document.querySelector('.vinyle');
+    const player = document.getElementById('player');
+
+    function toggleVinyle() {
+      if (vinyle.style.animationPlayState === 'paused') {
+        vinyle.style.animationPlayState = 'running';
+        player.play();
+      } else {
+        vinyle.style.animationPlayState = 'paused';
+        player.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
+
