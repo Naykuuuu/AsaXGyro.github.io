@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script src="script.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
@@ -24,55 +23,41 @@
       <h2>My mental health</h2>
       <p>I feel like something disappears in me, like my soul is corrupted. I know I need some help, a little affection. Maybe it's too much.</p>
       <p>On 12/09/25 I sent "Can we talk?" but got no reply. Anyway, here's the message I prepared:</p>
-      <p>I don’t know what is happening but I feel my mind changing. I’m not the same person anymore. I feel like a corrupted soul waiting to be saved. Every day I stack this bad feeling in my heart.</p>
-      <p>Thinking about you makes me cry, but not tears of sadness—something deeper. I am frustrated, I cry in the morning on the street, I just need some company, some love, a little affection.</p>
     </section>
 
     <!-- Section Sorry -->
     <section id="sorry" class="hidden">
       <h3>Sorry</h3>
       <p>I am sorry. Sometimes I feel I don’t deserve to exist. I sexualized you and did some terrible things that I am ashamed to even say.</p>
-      <p>You know, karma doesn't exist. I think life is just math: if you do misfortune to some people, misfortune comes back to you. I am actually paying for all the misfortune I caused you, and this is hard.</p>
-      <p>Allah exists; that’s why we are in this situation. I ask you, for the hundredth time, sorry. I can’t do anything else but wait for you to forgive me, and even if you do, I will always apologize.</p>
+      <p>You know, karma doesn't exist. Life is just math: if you do misfortune to people, misfortune comes back to you.</p>
     </section>
 
     <!-- Section Love -->
     <section id="love" class="hidden">
       <h3>Love</h3>
       <p>Email: mon-email@example.com</p>
-      <button onclick="alert('Merci !')">Envoyer</button>
+      <button id="sendBtn">Envoyer</button>
 
       <!-- Vinyle animé -->
-      <div class="vinyle"></div>
+      <div class="vinyle" id="vinyle"></div>
 
-      <!-- Audio sample -->
+      <!-- Conteneur souvenirs -->
+      <div id="souvenirs-container"></div>
+
+      <!-- Audio -->
       <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
+        <source src="../media/audio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </section>
   </main>
 
   <footer>
-    <small>© 2025 — Ton nom ou ton projet</small>
+    <small>© 2025 — My belove</small>
   </footer>
 
-  <!-- Script pour animation au scroll -->
-  <script>
-    // Intersection Observer pour faire apparaître les sections
-    const sections = document.querySelectorAll('section.hidden');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
-
+  <script src=script.js"></script>
 </body>
 </html>
+
