@@ -80,7 +80,7 @@ section.visible {
   height: 250px;
   margin: 20px auto;
   border-radius: 50%;
-  background: url('../media/vinyle.png') no-repeat center/cover;
+  background: url('vinyle.png') no-repeat center/cover;
   animation: spin 5s linear infinite, pulse 2s ease-in-out infinite;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
   cursor: pointer;
