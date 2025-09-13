@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* En-tête */
+/* Header */
 header {
   background: #222;
   padding: 20px;
@@ -42,7 +42,7 @@ nav a:focus {
   outline: none;
 }
 
-/* Zone principale */
+/* Main */
 main {
   background: #181818;
   padding: 20px;
@@ -62,7 +62,7 @@ main p {
   margin-bottom: 16px;
 }
 
-/* Animation au scroll */
+/* Scroll animation */
 section.hidden {
   opacity: 0;
   transform: translateY(20px);
@@ -74,21 +74,20 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Vinyle animé */
+/* Vinyle */
 .vinyle {
   width: 250px;
   height: 250px;
   margin: 20px auto;
   border-radius: 50%;
-  background: url('vinyle.png') no-repeat center/cover;
+  background: url('../media/vinyle.png') no-repeat center/cover;
   animation: spin 5s linear infinite, pulse 2s ease-in-out infinite;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  cursor: pointer;
   transition: transform 0.3s;
 }
 
-/* Vinyle interactif au hover */
 .vinyle:hover {
-  animation: spin 1s linear infinite, pulse 2s ease-in-out infinite;
   transform: scale(1.1);
 }
 
@@ -98,8 +97,27 @@ section.visible {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
+  0%,100% { transform: scale(1); }
   50% { transform: scale(1.05); }
+}
+
+/* Souvenirs */
+#souvenirs-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.souvenir {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 1.5s ease, opacity 1.5s ease;
 }
 
 /* Audio */
@@ -111,7 +129,7 @@ audio {
   margin-right: auto;
 }
 
-/* Boutons animés */
+/* Boutons */
 button {
   margin-top: 12px;
   background: #1db954;
@@ -129,7 +147,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Pied de page */
+/* Footer */
 footer {
   background: #222;
   padding: 12px;
@@ -139,3 +157,4 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+
