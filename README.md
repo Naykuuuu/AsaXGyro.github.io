@@ -1,5 +1,4 @@
-# naykuuuu.github.io
-!doctype html>
+
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
@@ -23,8 +22,8 @@
     <section id="Mental health">
       <h2>	My mental health</h2>
       <p>i feel like something dispear on me like my soul is corrupted. <br>I just know something that i need some 
-	  help,a litlle affection.Maybe it's to much</br>
-	  The 12/09/25 i send u "can we talk" no reply for now anyways im going to put the message i prepare her<br> 
+	  help, a litlle affection. Maybe it's to much</br>
+	  The 12/09/25 i send u "can we talk" no reply for now anyways im going to put the message i prepared for this message<br> 
 	  </br>I don’t know what is happening but I’m feeling that
 	  my mind change that I’m not the same person 
 	  i just became a corrupted soul who wait to being save. I stack everyday this bad feeling in my heart
