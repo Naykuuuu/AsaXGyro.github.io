@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
   <title>Help me</title>
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
 </head>
 <body>
@@ -48,25 +46,14 @@
     <!-- Section Love -->
     <section id="love" class="hidden">
       <h3>Love</h3>
-      <p>I love you.</p>
-      <p>When I see you I cry, but at the same time I’m happy. When you text me I cry, but at the same time I am happy. I understand that I can’t live without you and, to be honest, I don’t want to.</p>
-      <p>My heart still remembers when you told it that you were better without me; I searched deeply. My heart still remembers all our good memories and it will never forget how special you were to it.</p>
-      <p>I don’t know if we are ever going to be like before, I think not, but I will always be here for you if you need help. I love you so much.</p>
-      <p>I made this website to empty my heart, and I want you—when you think about me in the future—to remember this website and not all the bad things I did to you, and say deep down “he wasn’t a bad guy.”</p>
-      <p>I hope this website makes you happy. I know you are going through a very bad time in your life, I hope it can make you smile again like before, my beloved.</p>
-      <p>I built this website alone with a little help from the internet to correct my English and design it. I will continue to add content on the site, so when you have time don’t hesitate to check it.</p>
-      <p>You know I still ask God for happiness in your life. I still ask Him to give you and your family paradise. I still ask for our marriage, even though I know that’s not good because you probably don’t want it, and even for my mental health… but if God wills it…</p>
-      <p>I check Discord every minute to see if you reply. Not being able to see your reply is even harder. Not knowing what you are doing is hard too. Not being in your life is the hardest. Be happy. If you need help, I am here. Ask help from God and your friends.</p>
-      
-      <button id="sendBtn">Press</button>
+      <p>I love you. Here are my favorite songs:</p>
 
-      <!-- Vinyles côte à côte -->
       <div class="vinyles-container">
         <!-- Vinyle 1 -->
         <div class="vinyle-wrapper">
-          <div class="vinyle" id="vinyle"></div>
+          <div class="vinyle" id="vinyle1"></div>
           <div id="souvenirs-container1"></div>
-          <audio controls>
+          <audio id="audio1" controls>
             <source src="audio.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
@@ -74,15 +61,16 @@
 
         <!-- Vinyle 2 -->
         <div class="vinyle-wrapper">
-          <div class="vinyle" id="vinyle1"></div>
+          <div class="vinyle" id="vinyle2" style="background-image:url('vinyle1.png');"></div>
           <div id="souvenirs-container2"></div>
-          <audio controls>
+          <audio id="audio2" controls>
             <source src="audio1.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
         </div>
       </div>
 
+      <button id="sendBtn">Press</button>
     </section>
   </main>
 
@@ -90,7 +78,6 @@
     <small>© 2025 — My beloved</small>
   </footer>
 
-  <!-- Script JS -->
   <script src="script.js"></script>
 </body>
 </html>
