@@ -60,17 +60,29 @@
       
       <button id="sendBtn">Press</button>
 
-      <!-- Vinyle animé -->
-      <div class="vinyle" id="vinyle"></div>
+      <!-- Vinyles côte à côte -->
+      <div class="vinyles-container">
+        <!-- Vinyle 1 -->
+        <div class="vinyle-wrapper">
+          <div class="vinyle" id="vinyle1"></div>
+          <div id="souvenirs-container1"></div>
+          <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
 
-      <!-- Conteneur souvenirs -->
-      <div id="souvenirs-container"></div>
+        <!-- Vinyle 2 -->
+        <div class="vinyle-wrapper">
+          <div class="vinyle" id="vinyle2"></div>
+          <div id="souvenirs-container2"></div>
+          <audio controls>
+            <source src="audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
 
-      <!-- Audio -->
-      <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
     </section>
   </main>
 
