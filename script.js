@@ -19,7 +19,7 @@ const container = document.getElementById('souvenirs-container');
 // URLs images souvenirs
 const images = [
   "souvenir4.png",
-  "souevnir5.png",
+  "souvenir5.png",
   "souvenir6.png"
 ];
 
