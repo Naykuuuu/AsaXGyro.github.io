@@ -18,14 +18,10 @@ const container = document.getElementById('souvenirs-container');
 
 // URLs images souvenirs
 const images = [
-  "https://i.imgur.com/xwJ3K9O.png",
-  "https://i.imgur.com/fAFHodz.jpeg",
-  "https://i.imgur.com/geCBuOx.jpeg"
+  "images/xwJ3K9O.png",
+  "images/fAFHodz.jpeg",
+  "images/geCBuOx.jpeg"
 ];
-
-
-
-
 
 vinyle.addEventListener('click', () => {
   images.forEach((src,index) => {
