@@ -119,8 +119,8 @@ section.visible {
 }
 
 /* Souvenirs */
-#souvenirs-container1,
-#souvenirs-container2 {
+#souvenirs-container,
+#souvenirs-container1 {
   position: relative;
   width: 250px;
   height: 250px;
