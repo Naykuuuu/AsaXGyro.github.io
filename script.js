@@ -14,8 +14,8 @@ sections.forEach(section => observer.observe(section));
 
 // Vinyles et souvenirs
 const vinyles = [
-  { vinyleId: 'vinyle', containerId: 'souvenirs-container1', images: ["souvenir1.png", "souvenir2.png", "souvenir3.png"], audioId: 'audio' },
-  { vinyleId: 'vinyle1', containerId: 'souvenirs-container2', images: ["souvenir4.png", "souvenir5.png", "souvenir6.png"], audioId: 'audio1' }
+  { vinyleId: 'vinyle', containerId: 'souvenirs-container', images: ["souvenir1.png", "souvenir2.png", "souvenir3.png"], audioId: 'audio' },
+  { vinyleId: 'vinyle1', containerId: 'souvenirs-container1', images: ["souvenir4.png", "souvenir5.png", "souvenir6.png"], audioId: 'audio1' }
 ];
 
 function imageExists(url, callback) {
