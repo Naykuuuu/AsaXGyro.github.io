@@ -26,7 +26,7 @@ function imageExists(url, callback) {
 }
 
 vinyle.addEventListener('click', () => {
-  container.innerHTML = ''; // vide le container
+ 
 
   images.forEach((src, index) => {
     imageExists(src, exists => {
