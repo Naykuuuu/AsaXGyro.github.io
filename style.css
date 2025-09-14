@@ -1,5 +1,7 @@
 /* Scroll smooth */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Style général */
 body {
@@ -20,10 +22,30 @@ header {
   text-align: center;
 }
 
-header img { display: block; margin: 0 auto 10px auto; }
-header h1 { margin:0 0 10px 0; font-size:2rem; }
-nav a { margin:0 12px; text-decoration:none; color:#1db954; font-weight:bold; transition: color 0.3s, transform 0.3s; }
-nav a:hover, nav a:focus { color:#fff; transform: scale(1.1); outline:none; }
+header img {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #1db954;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #fff;
+  transform: scale(1.1);
+  outline: none;
+}
 
 /* Main */
 main {
@@ -35,41 +57,124 @@ main {
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-h2,h3 { color:#1db954; margin-top:0; }
-main p { margin-bottom:16px; }
+h2, h3 {
+  color: #1db954;
+  margin-top: 0;
+}
+
+main p {
+  text-align: left;
+  margin-bottom: 16px;
+}
 
 /* Scroll animation */
-section.hidden { opacity:0; transform:translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
-section.visible { opacity:1; transform:translateY(0); }
+section.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
-/* Vinyles côte à côte */
-.vinyles-container { display:flex; justify-content:space-around; flex-wrap:wrap; margin:20px 0; }
-.vinyle-wrapper { text-align:center; }
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Vinyle */
 .vinyle {
-  width:250px; height:250px; border-radius:50%;
-  background:url('vinyle.png') no-repeat center/cover;
+  width: 250px;
+  height: 250px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: url('vinyle.png') no-repeat center/cover;
   animation: spin 5s linear infinite, pulse 2s ease-in-out infinite;
-  box-shadow:0 0 20px rgba(0,0,0,0.6);
-  cursor:pointer; transition:transform 0.3s; margin:0 auto 10px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: transform 0.3s;
 }
-.vinyle:hover { transform: scale(1.1); }
-@keyframes spin { from { transform:rotate(0deg);} to{ transform:rotate(360deg); } }
-@keyframes pulse { 0%,100% { transform:scale(1);} 50%{ transform:scale(1.05);} }
+
+#vinyle1 {
+  background: url('vinyle1.png') no-repeat center/cover;
+}
+
+.vinyle:hover {
+  transform: scale(1.1);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Vinyles côte à côte */
+.vinyles-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.vinyle-block {
+  text-align: center;
+}
 
 /* Souvenirs */
-#souvenirs-container1, #souvenirs-container2 {
-  position:relative; width:250px; height:250px; margin:0 auto;
+#souvenirs-container1,
+#souvenirs-container2 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
 }
-.souvenir { position:absolute; width:60px; height:60px; border-radius:12px; object-fit:cover; opacity:0; pointer-events:none; transition: transform 1.5s ease, opacity 1.5s ease; }
+
+.souvenir {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
 
 /* Audio */
-audio { margin-top:15px; width:80%; display:block; margin-left:auto; margin-right:auto; }
+audio {
+  margin-top: 15px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Boutons */
-button { margin-top:12px; background:#1db954; color:#fff; border:none; padding:10px 16px; border-radius:8px; cursor:pointer; font-size:1rem; transition: background 0.2s, transform 0.2s; }
-button:hover { background:#17a44c; transform: scale(1.05); }
+button {
+  margin-top: 12px;
+  background: #1db954;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #17a44c;
+  transform: scale(1.05);
+}
 
 /* Footer */
-footer { background:#222; padding:12px; border-radius:12px; font-size:0.9rem; color:#aaa; text-align:center; margin-top:20px; }
+footer {
+  background: #222;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+  margin-top: 20px;
+}
