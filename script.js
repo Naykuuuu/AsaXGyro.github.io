@@ -18,9 +18,9 @@ const container = document.getElementById('souvenirs-container');
 
 // URLs images souvenirs
 const images = [
-  'souvenir1.png',
-  'souvenir2.png',
-  'souvenir3.png'
+  'souvenir4.png',
+  'souvenir5.png',
+  'souvenir6.png'
 ];
 
 vinyle.addEventListener('click', () => {
