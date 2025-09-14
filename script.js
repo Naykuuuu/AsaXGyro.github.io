@@ -14,8 +14,8 @@ sections.forEach(section => observer.observe(section));
 
 // Vinyles et souvenirs
 const vinyles = [
-  { vinyleId: 'vinyle1', containerId: 'souvenirs-container1', images: ["souvenir1.png", "souvenir2.png", "souvenir3.png"], audioId: 'audio1' },
-  { vinyleId: 'vinyle2', containerId: 'souvenirs-container2', images: ["souvenir4.png", "souvenir5.png", "souvenir6.png"], audioId: 'audio2' }
+  { vinyleId: 'vinyle', containerId: 'souvenirs-container1', images: ["souvenir1.png", "souvenir2.png", "souvenir3.png"], audioId: 'audio' },
+  { vinyleId: 'vinyle1', containerId: 'souvenirs-container2', images: ["souvenir4.png", "souvenir5.png", "souvenir6.png"], audioId: 'audio1' }
 ];
 
 function imageExists(url, callback) {
@@ -76,6 +76,6 @@ vinyles.forEach(v => setupVinyle(v));
 const sendBtn = document.getElementById('sendBtn');
 if (sendBtn) {
   sendBtn.addEventListener('click', () => {
-    alert('Hit the face of Asa !');
+    alert('Hit the face of Asa and gyro !');
   });
 }
